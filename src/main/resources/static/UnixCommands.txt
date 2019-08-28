@@ -1,0 +1,20 @@
+///This file contains the Unix commands to execute the Spring Rest API's API\\\
+
+curl -X POST localhost:8080/shell/v1/hoover/clean -H 'Content-type:application/json' -d '{
+"roomSize" : [5, 5],
+"coords" : [2, 3],
+"patches" : [
+[1, 0],
+[2, 2],
+[4, 1],
+[2, 3],
+[3, 3]
+],
+"instructions" : "EENEESESNWESNSWWSNEWSWNWW"
+}'
+
+
+
+curl -i -X GET localhost:8080/shell/v1/hoover/position
+
+curl -i -X GET localhost:8080/shell/v1/hoover/patchesCleaned
